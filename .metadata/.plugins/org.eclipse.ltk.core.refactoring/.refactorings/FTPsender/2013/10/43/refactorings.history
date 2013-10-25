@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FTPsender/src/FtpInboundChannelAdapterSample-context.xml&apos; to &apos;FtpOutboundChannelAdapterSample-context.xml&apos;" description="Rename resource &apos;FtpInboundChannelAdapterSample-context.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/FtpInboundChannelAdapterSample-context.xml" name="FtpOutboundChannelAdapterSample-context.xml" stamp="1382543227266" updateReferences="true"/>
+</session>

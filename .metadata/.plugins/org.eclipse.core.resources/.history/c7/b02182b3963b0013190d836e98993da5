@@ -1,0 +1,6 @@
+package com.rahul.jms;
+
+public class DataCheck {
+int no;
+String name="Rahul";
+}

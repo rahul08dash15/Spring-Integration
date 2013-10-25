@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.rahul.jms.DataCheck"/>
+<fullyQualifiedTypeName name="org.springframework.jms.core.MessageCreator"/>
+<fullyQualifiedTypeName name="com.ftp.FtpInboundChannelAdapterSample"/>
+<fullyQualifiedTypeName name="com.ftp.FtpOutboundChannelAdapterSample"/>
+</qualifiedTypeNameHistroy>

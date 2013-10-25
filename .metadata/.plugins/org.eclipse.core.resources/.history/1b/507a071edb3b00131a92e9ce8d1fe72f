@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int-ftp="http://www.springframework.org/schema/integration/ftp"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/ftp http://www.springframework.org/schema/integration/ftp/spring-integration-ftp-2.0.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<context:annotation-config></context:annotation-config>
+	<context:property-placeholder location="classpath:user.properties" />
+	<bean id="ftpClientFactory"
+		class="org.springframework.integration.ftp.session.DefaultFtpSessionFactory">
+		<property name="host" value="127.0.0.1" />
+		<property name="port" value="21" />
+		<property name="username" value="neeraj" />
+		<property name="password" value="password" />
+	</bean>
+	
+ <int-ftp:inbound-channel-adapter local-directory="" channel="" session-factory="" remote-directory=""></int-ftp:inbound-channel-adapter>
+
+</beans>

@@ -1,0 +1,24 @@
+package com.rahul.jms;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/")
+public class DashoraKaController {
+
+@RequestMapping("/")	
+	public String home(){
+	ApplicationContext factory = new ClassPathXmlApplicationContext("SIBeanConfig.xml");
+	MessageSender sender = (MessageSender) factory.getBean("messageSender");
+	Map map = new HashMap();
+	map.put("Name", "Why God Why");
+	sender.send(map);
+		return "home";
+	}
+}

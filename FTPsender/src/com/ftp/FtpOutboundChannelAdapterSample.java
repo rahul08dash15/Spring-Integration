@@ -1,0 +1,61 @@
+
+package com.ftp;
+
+
+import java.io.File;
+import java.io.InputStream;
+import org.apache.log4j.Logger;
+import org.apache.commons.io.FileUtils;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.integration.Message;
+import org.springframework.integration.MessageChannel;
+import org.springframework.integration.support.MessageBuilder;
+
+
+public class FtpOutboundChannelAdapterSample {
+
+
+	private final File baseFolder = new File("target" + File.separator + "toSend");
+
+
+	public void runDemo() throws Exception{
+
+		ConfigurableApplicationContext ctx =
+			new ClassPathXmlApplicationContext("FtpOutboundChannelAdapterSample-context.xml");
+
+		MessageChannel ftpChannel = ctx.getBean("ftpChannel", MessageChannel.class);
+
+		baseFolder.mkdirs();
+
+		final File fileToSendA = new File(baseFolder, "a.txt");
+		final File fileToSendB = new File(baseFolder, "b.txt");
+
+		final InputStream inputStreamA = FtpOutboundChannelAdapterSample.class.getResourceAsStream("/a.txt");
+		final InputStream inputStreamB = FtpOutboundChannelAdapterSample.class.getResourceAsStream("/b.txt");
+
+		FileUtils.copyInputStreamToFile(inputStreamA, fileToSendA);
+		FileUtils.copyInputStreamToFile(inputStreamB, fileToSendB);
+
+		
+		final Message<File> messageA = MessageBuilder.withPayload(fileToSendA).build();
+		final Message<File> messageB = MessageBuilder.withPayload(fileToSendB).build();
+
+		ftpChannel.send(messageA);
+		ftpChannel.send(messageB);
+
+		Thread.sleep(2000);
+
+		
+		
+	}
+
+	
+	public void cleanup() {
+		FileUtils.deleteQuietly(baseFolder);
+	}
+ public static void main(String[] args) throws Exception {
+	FtpOutboundChannelAdapterSample ftp = new FtpOutboundChannelAdapterSample();
+	ftp.runDemo();
+}
+}

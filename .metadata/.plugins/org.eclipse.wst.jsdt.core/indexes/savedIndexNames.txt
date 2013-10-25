@@ -1,0 +1,4 @@
+INDEX VERSION 1.122+D:\Frustration\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2324144898.index
+3631404513.index
+1504881858.index

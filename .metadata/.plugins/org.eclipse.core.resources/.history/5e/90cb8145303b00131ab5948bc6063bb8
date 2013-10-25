@@ -1,0 +1,27 @@
+package com.rahul.jms;
+
+import java.util.Map;
+
+import org.springframework.core.NestedRuntimeException;
+import org.springframework.jms.core.JmsTemplate;
+
+public class MessageSender {
+private JmsTemplate jmstemplate;
+
+public JmsTemplate getJmstemplate() {
+	return jmstemplate;
+}
+
+public void setJmstemplate(JmsTemplate jmstemplate) {
+	this.jmstemplate = jmstemplate;
+}
+
+public MessageSender(JmsTemplate jmstemplate) {
+	super();
+	this.jmstemplate = jmstemplate;
+}
+public void send(final Map map) throws NestedRuntimeException  {
+jmstemplate.convertAndSend(Rahul Dashora);
+}
+
+}

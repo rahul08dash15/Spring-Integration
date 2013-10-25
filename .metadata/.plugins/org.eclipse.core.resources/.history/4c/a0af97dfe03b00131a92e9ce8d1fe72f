@@ -1,0 +1,8 @@
+package snippet;
+
+public class Snippet {
+	AbstractRemoteFileInboundChannelAdapterParser
+		at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:412)
+		at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+}
+

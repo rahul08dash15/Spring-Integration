@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.rahul.jms.MessageSender&apos; to &apos;MessageConsumer&apos;&#x0D;&#x0A;- Original project: &apos;mayurreciever&apos;&#x0D;&#x0A;- Original element: &apos;com.rahul.jms.MessageSender&apos;&#x0D;&#x0A;- Renamed element: &apos;com.rahul.jms.MessageConsumer&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MessageSender&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.rahul.jms{MessageSender.java[MessageSender" matchStrategy="1" name="MessageConsumer" patterns="*" qualified="true" references="true" similarDeclarations="true" stamp="1382453710178" textual="true" version="1.0"/>
+</session>
